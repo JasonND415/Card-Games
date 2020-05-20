@@ -27,6 +27,9 @@ class Stack:
             return True
         else:
             return False
+    def peek(self):
+        return self.items[len(self.items)-1]
+
 
 def start():
     List=["2","3","4","5","6","7","8","9","10","Jack","King","Queen","Ace"]
