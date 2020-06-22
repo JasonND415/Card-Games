@@ -3,9 +3,8 @@
 Blackjack Rules: Naturals pay 1.5 to 1, split blackjacks pay 1:1, insurance pays 2:1, no resplitting, can only double down on 9,10,or 11 ONLY, only one card given for each ace split
 Info: 8 decks are used with a cut card mixed in
 '''
-import Cards
 import BlackjackSetup
-from Cards import Cards, Stack, randomize, randint
+from util.Cards import *
 from BlackjackSetup import start, colors, money, insurance, options, empty, empty_no_ace,shuffle,check, Spinner
 
 sum = 0
@@ -14,7 +13,8 @@ dealersum = 0
 deck = start()
 deck=randomize(deck)
 luck=Spinner()
-print("Your starting amount of money will be chosen randomly. Money ranges from $10 to $1,000,000. Good luck and good luck in the game. Press any button to start the spinner and game.")
+print("Your starting amount of money will be chosen randomly. Money ranges from $10 to $1,000,000. Good luck! Press any button to start the spinner and game.")
+l=input()
 number=luck.choose()
 cash = money((float(number)))
 disposal = Stack()
@@ -432,3 +432,5 @@ while True:
     r=False
 
 print("Your final amount is",cash.see_cash(), "dollars")
+print("Press enter to quit")
+r=input()

@@ -1,5 +1,4 @@
-import Cards
-from Cards import Cards,Stack,randomize,randint
+from util.Cards import *
 
 def start():
     List=["2","3","4","5","6","7","8","9","10","Jack","King","Queen","Ace"]
@@ -18,9 +17,9 @@ def start():
                     value=11
                 else:
                     value=int(symbol)
-                temp=Cards(symbol,suit,value)
+                temp=Cards(symbol,suit,value,None,None)
                 deck.push(temp)    
-    temp2=Cards("Shuffle","Cut",10000) 
+    temp2=Cards("Shuffle","Cut",10000,None,None) 
     deck.push(temp2)    
     return deck
 

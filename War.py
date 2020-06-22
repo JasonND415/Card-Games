@@ -1,8 +1,7 @@
 '''
 @author: Jason Dao
 '''
-import Cards
-from Cards import start,randomize,Stack
+from util.Cards import *
 Start=Stack()
 Start=start()
 Start=randomize(Start)
@@ -11,6 +10,7 @@ Dispose1=Stack()
 Person2=Stack()
 Dispose2=Stack()
 r=int(Start.size()/2)
+print("This starts the game of war")
 for i in range (r):
     Person1.push(Start.pop())
 Person2=Start
@@ -102,6 +102,8 @@ if sure==False:
         print("You lose the game")
     else:
         print("You win the game!!!!!")
+print("Press enter to quit")
+j=input()
 
         
 
