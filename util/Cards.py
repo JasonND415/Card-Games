@@ -13,6 +13,9 @@ class Cards:                                                     #card has symbo
         self.value=value
         self.name=name
         self.url=url
+    def __repr__(self):
+        return self.name
+
 
 def start():                                       #assign values to card and put in stack
     r=requests.get("https://en.wikipedia.org/wiki/Standard_52-card_deck")
