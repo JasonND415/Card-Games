@@ -21,3 +21,8 @@ class Stack:
         if self.count==0:                    #if peeking into empty stack, then raise error
             raise IndexError("Can't peek in empty stack")
         return self.items[len(self.items)-1]   #else return
+    def __repr__(self):
+        temp=""
+        for stuff in self.items:
+            temp+=str(stuff)+"========>"
+        return temp
